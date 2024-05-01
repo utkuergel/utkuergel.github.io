@@ -1,0 +1,11 @@
+.chart-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  #myChart {
+    width: 100%;
+    height: 550px;
+    width: 700px;
+  }
+  
