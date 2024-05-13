@@ -1,94 +1,46 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart;
-  
-    function renderChart(data) {
-      if (myChart) {
-        myChart.destroy(); // Eski grafik varsa, onu yok et
-      }
-      myChart = new Chart(ctx, {
-        type: 'line',
-        data: data,
-        options: {
-          animation: {
-            duration: 1000,
-            easing: 'easeInOutCubic',
-          },
-          scales: {
-            y: {
-              ticks: {
-                beginAtZero: true
-              }
-            }
-          }
-        }
-      });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animasyonlu Grafik</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/Chart.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .baslık{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(70, 70, 70);
+        font-weight: bolder;
     }
-  
-    // Örnek veri setleri
-    var sampleData1 = {
-      labels: ['1/05/2024', '2/05/2024', '13/05/2024', '14/05/2024', '15/05/2024'],
-      datasets: [{
-        label: 'Çözülen  Soru Sayısı',
-        data: [45, 55, 81],
-        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-        borderColor: 'rgba(54, 162, 235, 1)',
-        borderWidth: 1,
-        fill: false
-      }]
-    };
-  
-    var sampleData2 = {
-      labels: ['Z', 'X', 'C', 'V', 'B'],
-      datasets: [{
-        label: 'Doğru sayısı',
-        data: [37, 40, 50],
-        backgroundColor: 'rgba(102, 187, 108, 0.2)',
-        borderColor: 'rgb(56, 142, 60)',
-        borderWidth: 1,
-        fill: false
-      }]
-    };
-
-    var sampleData3 = {
-        labels: ['1. Gün', '2.Gün', 'C', 'D', 'E'],
-        datasets: [{
-          label: 'Yanlış Soru Sayısı',
-          data: [7, 15, 15],
-          backgroundColor: 'rgba(229, 57, 53, 0.2)',
-          borderColor: 'rgb(183, 28, 28)',
-          borderWidth: 1,
-          fill: false
-        }]
-      };
-
-      var sampleData4 = {
-        labels: ['1. Gün', '2.Gün', 'C', 'D', 'E'],
-        datasets: [{
-          label: 'Performans',
-          data: [36, 37.75, 47.25],
-          backgroundColor: 'rgba(253, 216, 53, 0.2)',
-          borderColor: 'rgb(251, 140, 0)',
-          borderWidth: 1,
-          fill: false
-        }]
-      };
+    body{
+        background-color: rgb(251, 250, 255);
+    }
+  </style>
+</head>
 
 
-    // Başlangıçta her iki veri setini de göster
-    renderChart({labels: sampleData1.labels, datasets: [sampleData1.datasets[0], sampleData2.datasets[0], sampleData3.datasets[0], sampleData4.datasets[0]]});
- 
-  });
+<body>
+
+<h1 class="baslık">| Utku ERGEL (11. Sınıf)</h1>
 
 
-  
-        // Grafik oluşturulduktan sonra, grafik öğesinin boyutunu ayarla
-        var chartContainer = document.querySelector('.chart-container');
-        var chartChart = document.querySelector('#myChart');
+  <div class="chart-container">
+    <canvas id="myChart"></canvas>
+  </div>
 
-        var chartCanvas = chartContainer.querySelector('canvas');
-        chartCanvas.style.height = chartContainer.clientHeight + 'px';
-        chartCanvas.style.width = chartContainer.clientWidth + 'px';
+  <script src="script.js"></script>
 
-        chartChart.style.height = chartContainer.clientHeight + 'px';
-        chartChart.style.width = chartContainer.clientWidth + 'px';
+    <div class="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+
+  <!-- 
+    <button id="showSampleData1">Sample Data 1</button>
+    <button id="showSampleData2">Sample Data 2</button>
+    <button id="showSampleData3">Sample Data 3</button> -->
+
+</body>
+</html>
