@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Örnek veri setleri
     var sampleData1 = {
-      labels: ['1/05/2024', '2/05/2024', '3/05/2024', '4/05/2024', '5/05/2024'],
+      labels: ['1/05/2024', '2/05/2024', '13/05/2024', '14/05/2024', '15/05/2024'],
       datasets: [{
         label: 'Çözülen  Soru Sayısı',
-        data: [45, 55],
+        data: [45, 55, 81],
         backgroundColor: 'rgba(54, 162, 235, 0.2)',
         borderColor: 'rgba(54, 162, 235, 1)',
         borderWidth: 1,
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
       labels: ['Z', 'X', 'C', 'V', 'B'],
       datasets: [{
         label: 'Doğru sayısı',
-        data: [37, 40],
+        data: [37, 40, 50],
         backgroundColor: 'rgba(102, 187, 108, 0.2)',
         borderColor: 'rgb(56, 142, 60)',
         borderWidth: 1,
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         labels: ['1. Gün', '2.Gün', 'C', 'D', 'E'],
         datasets: [{
           label: 'Yanlış Soru Sayısı',
-          data: [7, 15],
+          data: [7, 15, 15],
           backgroundColor: 'rgba(229, 57, 53, 0.2)',
           borderColor: 'rgb(183, 28, 28)',
           borderWidth: 1,
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         labels: ['1. Gün', '2.Gün', 'C', 'D', 'E'],
         datasets: [{
           label: 'Performans',
-          data: [36, 37.75],
+          data: [36, 37.75, 47.25],
           backgroundColor: 'rgba(253, 216, 53, 0.2)',
           borderColor: 'rgb(251, 140, 0)',
           borderWidth: 1,
